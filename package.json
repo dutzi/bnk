@@ -13,5 +13,6 @@
     "phantomjs": "^2.1.7",
     "slimerjs": "^0.906.2",
     "webpage": "^0.3.0"
-  }
+  },
+  "devDependencies": {}
 }

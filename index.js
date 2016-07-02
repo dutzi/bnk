@@ -1,5 +1,6 @@
 var system = require('system');
 var page = require('webpage').create();
+var fs = require('fs');
 
 var URL = 'https://www.bankhapoalim.co.il/';
 var TRANSACTIONS_URL = 'https://login.bankhapoalim.co.il/ServerServices/' +
@@ -97,8 +98,9 @@ function onFirstPageOpened(status) {
 }
 
 function onGotTransactions(transactions) {
-	console.log('Got the transactions, here they are:');
-	console.log(JSON.stringify(transactions));
+	console.log('Got the transactions, saving to `transactions.json`');
+	fs.write('transactions.json', JSON.stringify(transactions, true, 4), 'w');
+	phantom.exit();
 }
 
 // Entry point //
@@ -129,9 +131,3 @@ page.onResourceReceived = function(response) {
 		startTransactionsInterval(onGotTransactions);
 	}
 };
-
-setTimeout(function () {
-	page.render('example.png');
-	phantom.exit();
-	console.log('Done!');
-}, 10000);

@@ -2,3 +2,4 @@ example.png
 npm-debug.log
 node_modules
 credentials.js
+transactions.json

@@ -1,7 +1,9 @@
-# Poalim
+# Bnk
+
+Save money
 
 ## Running
 
 ```sh
-phantomjs index.js && imgcat example.png
+phantomjs index.js
 ```

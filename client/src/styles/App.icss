@@ -1,0 +1,113 @@
+/* Base Application Styles */
+body {
+    font-family: 'Alef';
+    font-size: 1.5em;
+    padding: 24px;
+}
+
+@font-face {
+    font-family: 'Alef';
+    src: url('/public/Alef-Bold.eot');
+    src: url('/public/Alef-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/public/Alef-Bold.woff') format('woff'),
+         url('/public/Alef-Bold.ttf') format('truetype'),
+         url('/public/Alef-Bold.svg#alefbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Alef';
+    src: url('/public/Alef-Regular.eot');
+    src: url('/public/Alef-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/public/Alef-Regular.woff') format('woff'),
+         url('/public/Alef-Regular.ttf') format('truetype'),
+         url('/public/Alef-Regular.svg#alefregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.tabs {
+	max-width: 40%;
+	margin: auto;
+	display: flex;
+	text-align: center;
+	overflow: hidden;
+}
+
+.tab {
+	flex: 1;
+	background: #ffc107;
+	padding: 18px;
+	border: none;
+}
+
+.tab:first-child {
+	/* border-radius: 10px 0px 0px 10px; */
+}
+
+.tab.selected {
+	background: #FF5722;
+	color: white;
+	/* box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.17) inset, */
+		/* 0px 3px 7px -1px rgba(0, 0, 0, 0.32) inset; */
+	/* text-shadow: 0px -1px black; */
+}
+
+.tab:last-child {
+	/* border-radius: 0px 10px 10px 0px; */
+}
+
+.transactions {
+	max-width: 60%;
+	margin: auto;
+	margin-top: 24px;
+}
+
+.date {
+	font-style: italic;
+	color: #cecece;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.transaction {
+	padding: 24px;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	flex: 1;
+}
+
+.amount {
+	display: flex;
+	flex: 0 0 140px;
+	justify-content: flex-end;
+	margin-right: 12px;
+}
+
+.amount.isNegative .amountContent {
+	background: #8BC34A;
+}
+
+.amountContent {
+	padding: 12px;
+	color: white;
+	background: #F44336;
+	display: flex;
+	align-items: center;
+}
+
+.nisSymbol {
+	display: inline;
+	font-size: 0.7em;
+	background: rgba(255, 255, 255, 0.21);
+	margin-left: 4px;
+	height: 1.2em;
+	padding: 0px 3px;
+}
